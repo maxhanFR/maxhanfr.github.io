@@ -9,7 +9,13 @@ layout: default
       {% assign y = post.date | date: "%Y" %}
       <li>
         <span>{{ d }} {{ m }}, {{ y }}</span>
-        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <a href="{{ post.url | relative_url }}">
+          {% if post.dir == 'ltr' or post.lang == 'en' %}
+            <bdi dir="ltr">{{ post.title | escape }}</bdi>
+          {% else %}
+            <bdi dir="rtl">{{ post.title | escape }}</bdi>
+          {% endif %}
+        </a>
       </li>
     {% endfor %}
   </ul>

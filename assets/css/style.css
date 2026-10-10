@@ -199,6 +199,11 @@ ul.blog-posts li a:visited {
 
 .blog ul.blog-posts a {
   font-family: var(--font-persian);
+  unicode-bidi: isolate;
+}
+
+.blog ul.blog-posts a bdi {
+  unicode-bidi: isolate;
 }
 
 /* Posts — bidirectional RTL with Persian + English */

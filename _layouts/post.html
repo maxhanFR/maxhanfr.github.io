@@ -2,11 +2,5 @@
 layout: default
 ---
 <article class="article" lang="{{ page.lang | default: 'fa' }}" dir="{{ page.dir | default: 'rtl' }}">
-  <header class="article-header">
-    <h1>{{ page.title | escape }}</h1>
-    <p class="article-date">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %b, %Y" }}</time>
-    </p>
-  </header>
   <div class="prose" dir="{{ page.dir | default: 'rtl' }}">{{ content }}</div>
 </article>
