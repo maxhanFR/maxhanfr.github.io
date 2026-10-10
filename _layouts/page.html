@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<article class="page-content">
+  <header class="article-header">
+    <p class="eyebrow">{% if page.lang == 'fa' %}صفحه{% else %}PAGE{% endif %}</p>
+    <h1>{{ page.title | escape }}</h1>
+  </header>
+  <div class="prose">{{ content }}</div>
+</article>

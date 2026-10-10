@@ -1,0 +1,22 @@
+title: "my blog"
+description: "notes on technology, ideas, and life."
+url: "https://maxhanfr.github.io"
+baseurl: ""
+lang: "en"
+markdown: kramdown
+permalink: /:categories/:title/
+timezone: Asia/Tehran
+
+# GitHub Pages builds this with its supported Jekyll environment.
+# Keep plugins limited to GitHub Pages-supported plugins unless using a custom Actions build.
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post

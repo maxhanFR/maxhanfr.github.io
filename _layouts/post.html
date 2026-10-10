@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="article">
+  <header class="article-header">
+    <p class="eyebrow">
+      {% if page.lang == 'fa' %}مقاله{% else %}ESSAY{% endif %}
+      {% if page.tags and page.tags.size > 0 %} · {{ page.tags | join: " / " }}{% endif %}
+    </p>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="article-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+  </header>
+  <div class="prose">{{ content }}</div>
+  <nav class="article-end" aria-label="Back to posts">
+    {% if page.lang == 'fa' %}
+      <a href="{{ '/fa/' | relative_url }}">← بازگشت به نوشته‌ها</a>
+    {% else %}
+      <a href="{{ '/' | relative_url }}">← Back to all writing</a>
+    {% endif %}
+  </nav>
+</article>

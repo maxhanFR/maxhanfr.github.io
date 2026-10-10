@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" dir="{{ page.dir | default: 'ltr' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+    {% seo %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="wordmark" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+      <nav aria-label="Main navigation" class="site-nav">
+        {% if page.lang == 'fa' %}
+          <a href="{{ '/fa/' | relative_url }}">خانه</a>
+          <a href="{{ '/fa/about/' | relative_url }}">درباره</a>
+          <a class="language-link" href="{{ '/en/' | relative_url }}" lang="en" dir="ltr">English ↗</a>
+        {% else %}
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+          <a class="language-link" href="{{ '/fa/' | relative_url }}" lang="fa" dir="rtl">فارسی ↗</a>
+        {% endif %}
+      </nav>
+    </header>
+
+    <main id="main" class="wrap">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer wrap">
+      <span>© {{ site.time | date: "%Y" }} {{ site.title | escape }}</span>
+      <span>{% if page.lang == 'fa' %}ساخته‌شده با Jekyll و GitHub Pages{% else %}Made with Jekyll and GitHub Pages{% endif %}</span>
+    </footer>
+  </body>
+</html>
