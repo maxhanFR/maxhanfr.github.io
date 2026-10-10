@@ -1,0 +1,128 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="agno" />
+          <option value="annotated-doc" />
+          <option value="annotated-types" />
+          <option value="anyio" />
+          <option value="attrs" />
+          <option value="certifi" />
+          <option value="charset-normalizer" />
+          <option value="click" />
+          <option value="distro" />
+          <option value="docstring_parser" />
+          <option value="fastapi" />
+          <option value="gitdb" />
+          <option value="GitPython" />
+          <option value="h11" />
+          <option value="h2" />
+          <option value="hpack" />
+          <option value="httpcore" />
+          <option value="httpx" />
+          <option value="hyperframe" />
+          <option value="idna" />
+          <option value="jiter" />
+          <option value="jsonschema" />
+          <option value="jsonschema-specifications" />
+          <option value="markdown-it-py" />
+          <option value="mdurl" />
+          <option value="openai" />
+          <option value="packaging" />
+          <option value="pydantic" />
+          <option value="pydantic-settings" />
+          <option value="pydantic_core" />
+          <option value="Pygments" />
+          <option value="python-decouple" />
+          <option value="python-dotenv" />
+          <option value="python-multipart" />
+          <option value="PyYAML" />
+          <option value="referencing" />
+          <option value="requests" />
+          <option value="rich" />
+          <option value="rpds-py" />
+          <option value="shellingham" />
+          <option value="smmap" />
+          <option value="sniffio" />
+          <option value="starlette" />
+          <option value="tqdm" />
+          <option value="typer" />
+          <option value="typing-inspection" />
+          <option value="typing_extensions" />
+          <option value="urllib3" />
+          <option value="asn1crypto" />
+          <option value="Babel" />
+          <option value="beautifulsoup4" />
+          <option value="cbor2" />
+          <option value="cffi" />
+          <option value="chardet" />
+          <option value="cryptography" />
+          <option value="docopt" />
+          <option value="docutils" />
+          <option value="et_xmlfile" />
+          <option value="freezegun" />
+          <option value="geoip2" />
+          <option value="gevent" />
+          <option value="greenlet" />
+          <option value="isodate" />
+          <option value="Jinja2" />
+          <option value="libsass" />
+          <option value="lxml" />
+          <option value="lxml_html_clean" />
+          <option value="MarkupSafe" />
+          <option value="maxminddb" />
+          <option value="num2words" />
+          <option value="ofxparse" />
+          <option value="openpyxl" />
+          <option value="passlib" />
+          <option value="pillow" />
+          <option value="platformdirs" />
+          <option value="polib" />
+          <option value="psutil" />
+          <option value="psycopg2-binary" />
+          <option value="pyasn1" />
+          <option value="pyasn1_modules" />
+          <option value="pycparser" />
+          <option value="pyOpenSSL" />
+          <option value="PyPDF2" />
+          <option value="pypng" />
+          <option value="pyserial" />
+          <option value="python-dateutil" />
+          <option value="python-magic" />
+          <option value="python-stdnum" />
+          <option value="pytz" />
+          <option value="pyusb" />
+          <option value="qrcode" />
+          <option value="reportlab" />
+          <option value="requests-file" />
+          <option value="requests-toolbelt" />
+          <option value="rjsmin" />
+          <option value="setuptools" />
+          <option value="six" />
+          <option value="soupsieve" />
+          <option value="SQLAlchemy" />
+          <option value="trino" />
+          <option value="uvicorn" />
+          <option value="vobject" />
+          <option value="Werkzeug" />
+          <option value="wheel" />
+          <option value="xlrd" />
+          <option value="XlsxWriter" />
+          <option value="xlwt" />
+          <option value="zeep" />
+          <option value="zope.event" />
+          <option value="zope.interface" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="project_id" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

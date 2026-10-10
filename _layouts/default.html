@@ -17,8 +17,13 @@
     <header class="site-header wrap">
       <a class="wordmark" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
       <nav aria-label="Main navigation" class="site-nav">
-          <a href="{{ '/en/' | relative_url }}">Home</a>
-          <a href="{{ '/en/blog/' | relative_url }}">Blog</a>
+          {% if page.lang == 'fa' %}
+            <a href="{{ '/' | relative_url }}">خانه</a>
+            <a href="{{ '/blog/' | relative_url }}">بلاگ</a>
+          {% else %}
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/blog/' | relative_url }}">Blog</a>
+          {% endif %}
       </nav>
     </header>
 
