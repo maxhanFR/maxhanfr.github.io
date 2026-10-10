@@ -120,3 +120,45 @@ h1 {
   .intro { padding-block: 54px 42px; }
   .site-footer { flex-direction: column; }
 }
+
+/* Global RTL layout */
+html {
+  direction: rtl;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Keep English passages readable inside Persian content */
+[lang="en"],
+[dir="ltr"],
+.ltr {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+/* English words and inline technical terms */
+.prose bdi,
+.prose [lang="en"] {
+  unicode-bidi: isolate;
+}
+
+/* Code must always remain LTR */
+pre,
+pre code,
+code,
+.highlight {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+/* Preserve sensible spacing in RTL */
+.prose ul,
+.prose ol {
+  padding-inline-start: 1.5rem;
+  padding-inline-end: 0;
+}
