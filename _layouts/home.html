@@ -17,9 +17,8 @@ layout: default
   <h2 id="recent-heading" class="section-heading">
     {% if page.lang == 'fa' %}نوشته‌ها{% else %}Latest writing{% endif %}
   </h2>
-  {% assign language_posts = site.posts | where: "lang", page.lang %}
-  {% if language_posts.size > 0 %}
-    {% for post in language_posts %}
+  {% if site.posts.size > 0 %}
+    {% for post in site.posts %}
       <article class="post-row">
         <div class="post-meta">
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
