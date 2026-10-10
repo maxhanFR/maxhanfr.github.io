@@ -5,9 +5,6 @@ A minimal editorial blog for GitHub Pages with independent Persian and English p
 ## URL structure
 
 - `/` — English homepage
-- `/en/` — explicit English homepage
-- `/fa/` — Persian homepage
-- `/about/` and `/fa/about/` — language-specific About pages
 - `/en/<slug>/` and `/fa/<slug>/` — independent articles
 
 Posts are independent: a Persian post does not need an English translation, and vice versa. The home page filters posts by their `lang` front-matter field.

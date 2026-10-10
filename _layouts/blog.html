@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<section class="post-list" aria-labelledby="all-posts-heading">
+  <h1 id="all-posts-heading" class="section-heading">
+    {% if page.lang == 'fa' %}بلاگ{% else %}Blog{% endif %}
+  </h1>
+
+  {% if site.posts.size > 0 %}
+    <ul class="post-index">
+      {% for post in site.posts %}
+        {% assign d = post.date | date: "%-d" %}
+        {% assign m = post.date | date: "%b" %}
+        {% assign y = post.date | date: "%Y" %}
+        <li class="post-index-row">
+          <span class="post-index-date">
+            {% if page.lang == 'fa' %}
+              {{ y }}/{{ post.date | date: "%m" }}/{{ post.date | date: "%d" }}
+            {% else %}
+              {{ d }} {{ m }}, {{ y }}
+            {% endif %}
+          </span>
+          <a class="post-index-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="empty-state">
+      {% if page.lang == 'fa' %}هنوز نوشته‌ای منتشر نشده است.{% else %}No posts yet.{% endif %}
+    </p>
+  {% endif %}
+</section>

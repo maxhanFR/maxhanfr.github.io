@@ -162,3 +162,20 @@ code,
   padding-inline-start: 1.5rem;
   padding-inline-end: 0;
 }
+.home-links { list-style: disc; padding-inline-start: 1.25rem; }
+.home-links li { margin: .15rem 0; }
+
+.post-index { list-style: none; padding: 0; margin: 1.5rem 0; }
+.post-index-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: .15rem 0;
+}
+.post-index-date {
+  flex: 0 0 7.5rem;
+  color: #555;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.post-index-title { text-decoration: none; }

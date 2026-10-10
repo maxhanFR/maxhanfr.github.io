@@ -1,14 +1,16 @@
-title: "my blog"
-description: "notes on technology, ideas, and life."
+title: "babelian"
+description: "blog of Mahan Babelian, AI engineer, Started October 2026"
 url: "https://maxhanfr.github.io"
 baseurl: ""
-lang: "en"
-markdown: kramdown
-permalink: /:categories/:title/
-timezone: Asia/Tehran
+lang: "fa"
+dir: "rtl"
 
-# GitHub Pages builds this with its supported Jekyll environment.
-# Keep plugins limited to GitHub Pages-supported plugins unless using a custom Actions build.
+theme: null
+markdown: kramdown
+permalink: /blog/:title/
+timezone: Asia/Tehran
+future: true
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -20,3 +22,10 @@ defaults:
       type: "posts"
     values:
       layout: post
+      lang: fa
+      dir: rtl
+  - scope:
+      path: ""
+    values:
+      lang: fa
+      dir: rtl

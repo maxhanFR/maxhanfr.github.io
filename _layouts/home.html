@@ -1,41 +1,17 @@
 ---
-layout: default
+layout: home
+title: babelian
+lang: en
+dir: ltr
 ---
 <section class="intro">
-  {% if page.lang == 'fa' %}
-    <p class="eyebrow">یادداشت‌ها و مقاله‌ها</p>
-    <h1>ایده‌ها، فناوری، و چیزهایی که یاد می‌گیرم.</h1>
-    <p class="lede">یک فضای شخصی برای نوشتن و فکر کردن.</p>
-  {% else %}
-    <p class="eyebrow">NOTES & ESSAYS</p>
-    <h1>Ideas, technology, and things I’m learning.</h1>
-    <p class="lede">A personal space for writing and thinking.</p>
-  {% endif %}
-</section>
+  <p class="lede">
+    Github blog of Mahan Babelian, AI engineer, Started October 2026
+  </p>
 
-<section class="post-list" aria-labelledby="recent-heading">
-  <h2 id="recent-heading" class="section-heading">
-    {% if page.lang == 'fa' %}نوشته‌ها{% else %}Latest writing{% endif %}
-  </h2>
-  {% if site.posts.size > 0 %}
-    {% for post in site.posts %}
-      <article class="post-row">
-        <div class="post-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-          {% if post.tags and post.tags.size > 0 %}
-            <span class="meta-separator">·</span>
-            <span>{{ post.tags | join: ", " }}</span>
-          {% endif %}
-        </div>
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-        {% if post.excerpt %}
-          <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 190 }}</p>
-        {% endif %}
-      </article>
-    {% endfor %}
-  {% else %}
-    <p class="empty-state">
-      {% if page.lang == 'fa' %}هنوز نوشته‌ای منتشر نشده است. اولین نوشته‌تان را در پوشه‌ی _posts اضافه کنید.{% else %}No posts yet. Add your first article to the _posts directory.{% endif %}
-    </p>
-  {% endif %}
+  <ul class="home-links">
+    <li>
+      𝕏 <a href="https://x.com/maxhanFR" target="_blank" rel="me noopener">@maxhanFR</a>
+    </li>
+  </ul>
 </section>

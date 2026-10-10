@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'fa' }}" dir="{{ page.dir | default: 'rtl' }}">
+<html lang="{{ page.lang | default: site.lang | default: 'fa' }}"
+      dir="{{ page.dir | default: site.dir | default: 'rtl' }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,19 +11,14 @@
     {% seo %}
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">
+      {% if page.lang == 'fa' %}پرش به محتوا{% else %}Skip to content{% endif %}
+    </a>
     <header class="site-header wrap">
       <a class="wordmark" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
       <nav aria-label="Main navigation" class="site-nav">
-        {% if page.lang == 'fa' %}
-          <a href="{{ '/fa/' | relative_url }}">خانه</a>
-          <a href="{{ '/fa/about/' | relative_url }}">درباره</a>
-          <a class="language-link" href="{{ '/en/' | relative_url }}" lang="en" dir="ltr">English ↗</a>
-        {% else %}
-          <a href="{{ '/' | relative_url }}">Home</a>
-          <a href="{{ '/about/' | relative_url }}">About</a>
-          <a class="language-link" href="{{ '/fa/' | relative_url }}" lang="fa" dir="rtl">فارسی ↗</a>
-        {% endif %}
+          <a href="{{ '/en/' | relative_url }}">Home</a>
+          <a href="{{ '/en/blog/' | relative_url }}">Blog</a>
       </nav>
     </header>
 
@@ -32,7 +28,9 @@
 
     <footer class="site-footer wrap">
       <span>© {{ site.time | date: "%Y" }} {{ site.title | escape }}</span>
-      <span>{% if page.lang == 'fa' %}ساخته‌شده با Jekyll و GitHub Pages{% else %}Made with Jekyll and GitHub Pages{% endif %}</span>
+      <span>
+        Powered by Jekyll and GitHub Pages
+      </span>
     </footer>
   </body>
 </html>
