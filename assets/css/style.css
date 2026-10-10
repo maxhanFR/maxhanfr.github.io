@@ -39,10 +39,9 @@ body {
   color: var(--text-color);
 }
 
-html[lang="fa"] body,
-html[dir="rtl"] body {
-  font-family: var(--font-persian);
-  text-align: right;
+body > header {
+  direction: ltr;
+  text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,12 +49,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
 }
 
-html[lang="fa"] h1,
-html[lang="fa"] h2,
-html[lang="fa"] h3,
-html[dir="rtl"] h1,
-html[dir="rtl"] h2,
-html[dir="rtl"] h3 {
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3 {
   font-family: var(--font-persian);
 }
 
@@ -73,10 +69,6 @@ nav a {
   margin-right: 8px;
 }
 
-html[dir="rtl"] nav a {
-  margin-right: 0;
-  margin-left: 8px;
-}
 
 strong, b {
   color: var(--heading-color);
@@ -97,8 +89,9 @@ img {
 }
 
 code {
-  font-family: monospace;
-  padding: 2px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 1em;
+  padding: 2px 4px;
   background-color: var(--code-background-color);
   color: var(--code-color);
   border-radius: 3px;
@@ -113,7 +106,7 @@ blockquote {
   font-style: italic;
 }
 
-html[dir="rtl"] blockquote {
+[dir="rtl"] blockquote {
   border-left: none;
   border-right: 1px solid #999;
   padding-left: 0;
@@ -169,10 +162,6 @@ nav {
   padding-left: 1.25rem;
 }
 
-html[dir="rtl"] .home-links {
-  padding-left: 0;
-  padding-right: 1.25rem;
-}
 
 .home-links li {
   margin: 0.15rem 0;
@@ -203,14 +192,9 @@ ul.blog-posts li a:visited {
   color: var(--visited-color);
 }
 
-/* Blog page: RTL list, right-aligned; date column first, then titles */
 .blog ul.blog-posts {
-  direction: rtl;
-  text-align: right;
-}
-
-.blog ul.blog-posts li {
-  justify-content: flex-start;
+  direction: ltr;
+  text-align: left;
 }
 
 .blog ul.blog-posts a {
@@ -234,12 +218,15 @@ ul.blog-posts li a:visited {
   line-height: 1.75;
 }
 
-html[dir="rtl"] .prose,
+article[dir="rtl"],
 .prose[dir="rtl"] {
   direction: rtl;
   text-align: right;
   unicode-bidi: isolate;
   font-family: var(--font-persian);
+}
+
+.prose[dir="rtl"] {
   line-height: 2;
 }
 
@@ -286,28 +273,22 @@ html[dir="rtl"] .prose,
   direction: ltr;
   text-align: left;
   unicode-bidi: isolate;
-  padding: 1px 15px;
+  padding: 12px 16px;
   background-color: var(--code-background-color);
   color: var(--code-color);
   border-radius: 3px;
   margin-block-start: 1em;
   margin-block-end: 1em;
   overflow-x: auto;
-  font-size: 0.9em;
-  line-height: 1.5;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .prose pre code {
   direction: ltr;
   background: transparent;
   padding: 0;
-}
-
-.article-end {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px dashed #ccc;
-  font-size: 0.95em;
+  font-size: inherit;
 }
 
 .empty-state {

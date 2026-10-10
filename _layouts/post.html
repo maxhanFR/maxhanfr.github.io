@@ -9,11 +9,4 @@ layout: default
     </p>
   </header>
   <div class="prose" dir="{{ page.dir | default: 'rtl' }}">{{ content }}</div>
-  <nav class="article-end" aria-label="Back to posts">
-    {% if page.dir == 'ltr' or page.lang == 'en' %}
-      <a href="{{ '/blog/' | relative_url }}">← Back to blog</a>
-    {% else %}
-      <a href="{{ '/blog/' | relative_url }}">بازگشت به بلاگ ←</a>
-    {% endif %}
-  </nav>
 </article>
