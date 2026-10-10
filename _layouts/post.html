@@ -1,21 +1,19 @@
 ---
 layout: default
 ---
-<article class="article">
+<article class="article" lang="{{ page.lang | default: 'fa' }}" dir="{{ page.dir | default: 'rtl' }}">
   <header class="article-header">
-    <p class="eyebrow">
-      {% if page.lang == 'fa' %}مقاله{% else %}ESSAY{% endif %}
-      {% if page.tags and page.tags.size > 0 %} · {{ page.tags | join: " / " }}{% endif %}
-    </p>
     <h1>{{ page.title | escape }}</h1>
-    <p class="article-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+    <p class="article-date">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %b, %Y" }}</time>
+    </p>
   </header>
-  <div class="prose">{{ content }}</div>
+  <div class="prose" dir="{{ page.dir | default: 'rtl' }}">{{ content }}</div>
   <nav class="article-end" aria-label="Back to posts">
-    {% if page.lang == 'fa' %}
-      <a href="{{ '/fa/' | relative_url }}">← بازگشت به نوشته‌ها</a>
+    {% if page.dir == 'ltr' or page.lang == 'en' %}
+      <a href="{{ '/blog/' | relative_url }}">← Back to blog</a>
     {% else %}
-      <a href="{{ '/' | relative_url }}">← Back to all writing</a>
+      <a href="{{ '/blog/' | relative_url }}">بازگشت به بلاگ ←</a>
     {% endif %}
   </nav>
 </article>

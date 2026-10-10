@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Blog
-lang: fa
-dir: rtl
+lang: en
+dir: ltr
 permalink: /blog/
 ---
